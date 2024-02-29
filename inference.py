@@ -55,7 +55,8 @@ num_max_token_for_generation = 20
 generated_text_ids = []
 prev_output = ''
 
-past_key_values = ov.Tensor(type=ov.Type.f32 , shape=(32,2,1,32,0,128))
+#past_key_values = ov.Tensor(type=ov.Type.f32 , shape=(32,2,1,32,0,128))
+past_key_values = ov.Tensor(type=ov.Type.f32 , shape=(32,2,1,32,0,0))
 
 past_kv_names = []
 for n in range(32):
@@ -65,6 +66,7 @@ for n in range(32):
     past_kv_name = str(7237 + n)
     past_kv_names.append(past_kv_name)
 
+print('*** Start inferencing')
 for i in range(num_max_token_for_generation):
 
     # Run inference (to generate the logits for the next word prediction)
