@@ -1,0 +1,6 @@
+optimum-intel
+openvino
+nncf
+numpy
+einops
+onnx

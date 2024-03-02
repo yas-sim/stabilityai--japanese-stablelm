@@ -9,7 +9,8 @@ from optimum.intel import OVModelForCausalLM
 #    trust_remote_code=True,
 #)
 
-model_id = 'stabilityai/japanese-stablelm-base-alpha-7b'
+#model_id = 'stabilityai/japanese-stablelm-base-alpha-7b'
+model_id = 'stabilityai/japanese-stablelm-base-gamma-7b'
 model = OVModelForCausalLM.from_pretrained(
     model_id=model_id, 
     export=True, compile=False, load_in_8bit=False, trust_remote_code=True, 
